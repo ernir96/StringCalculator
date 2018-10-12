@@ -5,6 +5,7 @@ var StringCalculator = {
 		if (numbers == "") {
 	    return 0;
 	  }
+
     else {
       var negativeNumbers = [];
       var arrNumber = numbers.split(/,|\n/g);
@@ -20,7 +21,6 @@ var StringCalculator = {
         }
       }
 
-
       negativeList = "";
       if (negativeExists) {
         for(i = 0; i < negativeNumbers.length - 1; i++) {
@@ -29,14 +29,15 @@ var StringCalculator = {
         negativeList += negativeNumbers[negativeNumbers.length - 1];
       }
 
-
       if (negativeExists) {
         return "Negatives not allowed: " + negativeList;
       }
 
       var sum = 0;
       for(i = 0; i < arrNumber.length; i++) {
-        sum += parseInt(arrNumber[i]);
+        if (parseInt(arrNumber[i]) <= 1000) {
+          sum += parseInt(arrNumber[i]);
+        }
       }
       return sum;
     }
