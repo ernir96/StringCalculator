@@ -17,3 +17,7 @@ test("Testing two numbers", () => {
 test("Testing unknown number of numbers", () => {
   expect(StringCalculator.Add("8,7,12,11,1")).toBe(39);
 });
+
+test("Testing to allow newline or 'comma' to split numbers", () => {
+  expect(StringCalculator.Add("8,7\n12,11\n1")).toBe(39);
+});

@@ -6,7 +6,7 @@ var StringCalculator = {
 	    return 0;
 	  }
     else {
-      var arrNumber = numbers.split(",");
+      var arrNumber = numbers.split(/,|\n/g);
       var sum = 0;
       for(i = 0; i < arrNumber.length; i++) {
         sum += parseInt(arrNumber[i]);
