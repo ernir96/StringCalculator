@@ -9,3 +9,7 @@ test("Testing empty string", () => {
 test("Testing one number", () => {
   expect(StringCalculator.Add("8")).toBe(8);
 });
+
+test("Testing two numbers", () => {
+  expect(StringCalculator.Add("8,7")).toBe(15);
+});
