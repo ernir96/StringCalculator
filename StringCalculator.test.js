@@ -13,3 +13,7 @@ test("Testing one number", () => {
 test("Testing two numbers", () => {
   expect(StringCalculator.Add("8,7")).toBe(15);
 });
+
+test("Testing unknown number of numbers", () => {
+  expect(StringCalculator.Add("8,7,12,11,1")).toBe(39);
+});

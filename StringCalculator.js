@@ -5,12 +5,13 @@ var StringCalculator = {
 		if (numbers == "") {
 	    return 0;
 	  }
-    else if (numbers.length == 1) {
-      return parseInt(numbers);
-    }
     else {
       var arrNumber = numbers.split(",");
-      return parseInt(arrNumber[0]) + parseInt(arrNumber[1]);
+      var sum = 0;
+      for(i = 0; i < arrNumber.length; i++) {
+        sum += parseInt(arrNumber[i]);
+      }
+      return sum;
     }
 	}
 };
