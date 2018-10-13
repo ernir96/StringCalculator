@@ -33,3 +33,7 @@ test("Testing to not allow negative numbers when 1 negative", () => {
 test("Testing functionality to ignore numbers > 1000", () => {
   expect(StringCalculator.Add("1001,2")).toBe(2);
 });
+
+test("Testing Custum delimiter", () => {
+  expect(StringCalculator.Add("//;\n1;2")).toBe(3);
+});

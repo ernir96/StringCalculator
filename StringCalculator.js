@@ -8,7 +8,20 @@ var StringCalculator = {
 
     else {
       var negativeNumbers = [];
-      var arrNumber = numbers.split(/,|\n/g);
+      if(numbers.startsWith("//"))
+      {
+        var delimiter = numbers.charAt(2);
+        var skip = numbers.substring(4);
+        var numArr = skip.split(delimiter);
+        var numSum = 0;
+        for (i = 0; i < numArr.length; i++) {
+          numSum += parseInt(numArr[i]);
+        }
+        return numSum;
+      } else {
+        var arrNumber = numbers.split(/,|\n/g);
+      }
+
 
       var negativeExists = false;
       var j = 0;
